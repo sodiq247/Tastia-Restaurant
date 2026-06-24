@@ -1,0 +1,359 @@
+
+@import "tailwindcss";
+
+
+/* =========================================================
+   TASTIA RESTAURANT — Design System
+   Color Theme: #b52026 (primary red), #ff2a13 (CTA red)
+   Fonts: Josefin Sans (headings) + Poppins (body)
+   ========================================================= */
+
+@theme inline {
+  /* Brand Colors */
+  --color-primary: #b52026;
+  --color-primary-dark: #7d1f23;
+  --color-primary-light: #d93239;
+  --color-cta: #ff2a13;
+  --color-cta-hover: #ef2201;
+  --color-cta-dark: #ac1100;
+
+  /* Neutrals */
+  --color-black-rich: #030000;
+  --color-black: #000000;
+  --color-dark: #272727;
+  --color-body: #2e2e2e;
+  --color-muted: #6b6b6b;
+  --color-border: #e5e5e5;
+  --color-bg-light: #f3f3f3;
+  --color-bg-section: #fafafa;
+  --color-white: #ffffff;
+
+  /* Accent */
+  --color-gold: #c9a96e;
+  --color-gold-light: #e8d5b7;
+
+  /* Fonts */
+  --font-heading: "Josefin Sans", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* Spacing scale extras */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-30: 7.5rem;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+}
+
+/* Note: box-sizing reset removed — Tailwind v4 Preflight handles it.
+   A manual `* { margin:0; padding:0 }` was overriding Tailwind utilities. */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-body);
+  background: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--color-dark);
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================================================
+   Scrollbar Styling
+   ========================================================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* =========================================================
+   Custom Utility Classes
+   ========================================================= */
+
+/* Primary gradient */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-cta) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(135deg, var(--color-black-rich) 0%, #1a0002 100%);
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-cta) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section separator */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-cta));
+  border-radius: 2px;
+}
+
+/* Shine overlay on hover */
+.shine-hover {
+  position: relative;
+  overflow: hidden;
+}
+.shine-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.shine-hover:hover::before {
+  left: 150%;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(181, 32, 38, 0.12);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(181, 32, 38, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(181, 32, 38, 0); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Shimmer loading */
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Counter animation */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide in from bottom */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero background overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(3, 0, 0, 0.5) 0%,
+    rgba(3, 0, 0, 0.3) 50%,
+    rgba(3, 0, 0, 0.7) 100%
+  );
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(3, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Badge */
+.badge-primary {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Section label */
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Noise texture overlay */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Container max width */
+.container-max {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1400px) {
+  .container-max {
+    max-width: 1400px;
+  }
+}
+
+/* Aspect ratio helpers */
+.aspect-food {
+  aspect-ratio: 4/3;
+}
+.aspect-hero {
+  aspect-ratio: 16/9;
+}
+.aspect-square {
+  aspect-ratio: 1/1;
+}
+
+/* Image overlay */
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.img-overlay img {
+  transition: transform 0.6s ease;
+}
+.img-overlay:hover img {
+  transform: scale(1.08);
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  background: var(--color-cta);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 42, 19, 0.3);
+}
+.btn-primary:hover {
+  background: var(--color-cta-hover);
+  box-shadow: 0 6px 20px rgba(255, 42, 19, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: var(--color-primary);
+}
+.btn-white:hover {
+  background: var(--color-bg-light);
+  transform: translateY(-2px);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  html.auto-dark body {
+    background: #0a0a0a;
+    color: #ededed;
+  }
+}
