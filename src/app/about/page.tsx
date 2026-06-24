@@ -1,7 +1,7 @@
 "use client";
 
 import { BRAND, TESTIMONIALS, GALLERY_IMAGES } from "@/lib/data";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 
 /* ─── Animation Variants ─── */
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number = 0) => ({
     opacity: 1,
@@ -31,7 +31,7 @@ const fadeUp = {
   }),
 };
 
-const scaleIn = {
+const scaleIn: Variants = {
   hidden: { opacity: 0, scale: 0.92 },
   visible: {
     opacity: 1,
@@ -40,7 +40,7 @@ const scaleIn = {
   },
 };
 
-const stagger = {
+const stagger: Variants = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
