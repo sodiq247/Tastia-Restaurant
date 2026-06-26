@@ -49,7 +49,8 @@ export default function Home() {
         {/* Immersive background image with parallax effect */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
+            // src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
+            src="https://tastiarestaurantng.com/wp-content/uploads/2024/07/SAVE_20240718_225034.webp"
             alt="Tastia Dining Ambiance"
             fill
             className="object-cover opacity-45 scale-105"
@@ -144,7 +145,8 @@ export default function Home() {
               className="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
             >
               <Image
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+                // src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+                src="/Tastia-2-Lobby-8.webp"
                 alt="Tastia Wuse 2 Interior"
                 fill
                 className="object-cover"

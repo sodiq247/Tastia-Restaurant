@@ -78,7 +78,7 @@ export default function OrderPage() {
   return (
     <div className="min-h-screen bg-zinc-50/50 pb-20">
       {/* HEADER */}
-      <section className="bg-zinc-950 text-white py-10 md:py-14 text-center">
+      <section className="bg-zinc-950 text-white py-10 md:py-14 text-center mb-10 md:mb-16">
         <div className="container-max mx-auto px-4 md:px-8 space-y-2">
           <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tight" style={{ fontFamily: "Josefin Sans, sans-serif", color: "#d4d4d8" }}>
             Review & Checkout
@@ -89,7 +89,7 @@ export default function OrderPage() {
         </div>
       </section>
 
-      <section className="container-max mx-auto px-4 md:px-8 ">
+      <section className="container-max mx-auto px-4 md:px-8  ">
         {cartItems.length === 0 ? (
           <div className="max-w-md mx-auto text-center bg-white p-10 rounded-2xl border shadow-sm space-y-6">
             <div className="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center text-[#b52026] mx-auto">

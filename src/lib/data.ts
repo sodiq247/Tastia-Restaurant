@@ -7,14 +7,14 @@ export const BRAND = {
   name: "Tastia Restaurant",
   tagline: "Nigeria's Premier Dining Experience",
   description:
-    "Tastia Restaurant & Bakery is a major presence in Abuja's dining scene, recognized as the largest restaurant in the city with a seating capacity of approximately 230 guests and backed by an investment exceeding ₦500 million.",
+    "We are a fast-rising restaurant in the hospitality industry. Our journey began in 2020, as a single, humble establishment with a vision to offer exceptional dining experiences through quality ingredients and innovative cuisine. Our commitment to excellence quickly earned us a loyal customer base despite the challenges of starting in a pandemic year. Over the past four years, we have thrived and expanded, growing from that one store into a thriving chain with 11 branches across different locations. Our journey of growth and resilience continues as we aim for even more expansion, always striving to deliver the same warmth, quality, and exceptional service that have become our hallmark.",
   shortDescription:
     "At Tastia, we believe in making memories through amazing food and company. From our inventive and broad menu to our friendly hospitality, every aspect is intended to make you feel at home.",
   mission:
-    "To deliver an exceptional dining experience that combines authentic Nigerian flavors with world-class hospitality, making every visit unforgettable.",
+    "Our mission is to provide the highest quality of products at the best possible price while providing vast meal varieties for our customers' delight",
   vision:
-    "To become the most celebrated restaurant brand in West Africa, setting the gold standard for quality, service, and culinary innovation.",
-  founded: "2022",
+    "Our vision is to be a global symbol for excellence, connection and affluence",
+  founded: "2020",
   phone: "+234 908 000 0000",
   whatsapp: "+2349080000000",
   email: "info@tastiarestaurantng.com",
@@ -30,8 +30,8 @@ export const BRAND = {
     { label: "Menu Items", value: "100+", suffix: "" },
     { label: "Investment", value: "₦500M+", suffix: "" },
     { label: "Daily Guests", value: "500+", suffix: "" },
-    { label: "Branches", value: "5+", suffix: "" },
-    { label: "Years of Excellence", value: "4+", suffix: "" },
+    { label: "Branches", value: "11", suffix: "" },
+    { label: "Years of Excellence", value: "6+", suffix: "" },
   ],
 } as const;
 
@@ -528,8 +528,7 @@ export const FEATURED_ITEMS: MenuItem[] = [
       "Our signature party jollof rice cooked over open fire with a rich tomato base, served with grilled chicken and plantain",
     price: 4500,
     category: "rice-dishes",
-    image:
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80",
+    image: "/Special Jollof Rice.jpg",
     tags: ["Popular", "Nigerian", "Signature"],
     isPopular: true,
     isChefPick: true,
@@ -539,14 +538,28 @@ export const FEATURED_ITEMS: MenuItem[] = [
     calories: 650,
   },
   {
+    id: "drinks-2",
+    name: "Pineapple Ginger Smoothie",
+    description:
+      "Freshly blended pineapples with a kick of fresh ginger and honey sweetener",
+    price: 2500,
+    category: "drinks",
+    image:
+      "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80",
+    tags: ["Healthy", "Fresh"],
+    isPopular: false,
+    isChefPick: false,
+    isNew: true,
+    prepTime: "7 mins",
+  },
+  {
     id: "peppersoup",
     name: "Catfish Pepper Soup",
     description:
       "Authentic Nigerian catfish pepper soup with aromatic spices, perfect for every occasion",
     price: 5500,
     category: "soups-stews",
-    image:
-      "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80",
+    image: "/Catfish Pepper Soup.png",
     tags: ["Spicy", "Nigerian", "Healthy"],
     isPopular: true,
     isChefPick: false,
@@ -555,32 +568,15 @@ export const FEATURED_ITEMS: MenuItem[] = [
     prepTime: "25 mins",
     calories: 380,
   },
-  {
-    id: "suya-platter",
-    name: "Premium Suya Platter",
-    description:
-      "Thinly sliced beef marinated in yaji spice blend, grilled to perfection, served with onions and tomatoes",
-    price: 6500,
-    category: "grills",
-    image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
-    tags: ["Grilled", "Popular", "Street Food"],
-    isPopular: true,
-    isChefPick: true,
-    isNew: false,
-    spiceLevel: 2,
-    prepTime: "15 mins",
-    calories: 520,
-  },
+
   {
     id: "egusi-soup",
     name: "Egusi Soup & Pounded Yam",
     description:
-      "Rich egusi soup with assorted meats and stockfish, served with fresh pounded yam",
+      "Rich egusi soup with chicken,stockfish, beef and served with fresh pounded yam",
     price: 5000,
     category: "soups-stews",
-    image:
-      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+    image: "/Local-Dish.webp",
     tags: ["Traditional", "Nigerian", "Filling"],
     isPopular: true,
     isChefPick: false,
@@ -640,6 +636,23 @@ export const FEATURED_ITEMS: MenuItem[] = [
     spiceLevel: 0,
     prepTime: "15 mins",
     calories: 620,
+  },
+  {
+    id: "suya-platter",
+    name: "Premium Suya Platter",
+    description:
+      "Thinly sliced beef marinated in yaji spice blend, grilled to perfection, served with onions and tomatoes",
+    price: 6500,
+    category: "grills",
+    image:
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+    tags: ["Grilled", "Popular", "Street Food"],
+    isPopular: true,
+    isChefPick: true,
+    isNew: false,
+    spiceLevel: 2,
+    prepTime: "15 mins",
+    calories: 520,
   },
   {
     id: "ofada-rice",
@@ -754,8 +767,7 @@ export const SERVICES: Service[] = [
     longDescription:
       "Our VIP Lounge offers an intimate, luxurious private dining experience. Perfect for business meetings, anniversaries, birthday celebrations, and exclusive gatherings requiring privacy and premium service.",
     icon: "👑",
-    image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
+    image: "/Amino-Kano-Tastia-8.webp",
     features: [
       "Private, soundproofed space",
       "Dedicated butler service",
@@ -772,8 +784,7 @@ export const SERVICES: Service[] = [
     longDescription:
       "Our outdoor catering service is perfect for garden parties, weddings, corporate picnics, and outdoor events. We bring all necessary equipment and our expert team ensures a seamless experience.",
     icon: "🌿",
-    image:
-      "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=800&q=80",
+    image: "/Outdoor1.webp",
     features: [
       "Full outdoor setup provided",
       "Tents and equipment included",
@@ -801,63 +812,43 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    name: "Amina Bello",
-    role: "Regular Customer",
+    name: "Chinwe I.",
+    role: "Entrepreneur",
     content:
-      "Tastia is hands down the best restaurant in Abuja. The jollof rice is absolutely divine, and the service is always top-notch. I bring all my guests here — they always leave impressed!",
+      "Tastia is my go-to spot whenever I want something comforting yet gourmet. The atmosphere is so welcoming, and the food never disappoints!",
     rating: 5,
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    date: "March 2025",
+    date: "July 2024",
   },
   {
     id: "2",
-    name: "Chukwuemeka Okonkwo",
-    role: "Corporate Client",
+    name: "Theresa & Husband",
+    role: "Businessman",
     content:
-      "We used Tastia for our company's annual dinner — 200+ guests — and they executed flawlessly. The food quality was exceptional, the setup was professional, and the team was incredibly responsive.",
+      "My wife Theresa and I came for our 39th anniversary dinner last night. We were waited by Cynthia, who was fun and delightful. As usual, everything was wonderful. It’s always a great experience at Tastia Restaurant.",
     rating: 5,
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    date: "January 2025",
+    date: "July 2024",
   },
   {
     id: "3",
-    name: "Fatima Al-Hassan",
-    role: "Food Blogger",
+    name: "Uniabuja Student",
+    role: "Student",
     content:
-      "As someone who reviews restaurants professionally, Tastia consistently impresses me. The egusi soup with pounded yam is authentic and perfectly seasoned. This is Nigerian cuisine done right!",
+      "Last Friday I came for restaurant week. It was FABULOUS! The portions were overly generous. Everything was so yummy – what a bargain. I will be back soon. Thanks!",
     rating: 5,
     image: "https://randomuser.me/api/portraits/women/68.jpg",
-    date: "April 2025",
+    date: "July 2024",
   },
   {
     id: "4",
-    name: "David Adeyemi",
-    role: "Business Owner",
+    name: "Business With Alex Digital",
+    role: "Digital Marketer",
     content:
-      "The VIP lounge is perfect for business meetings. Excellent privacy, beautiful ambiance, and the food is always fresh. Tastia has become my go-to for hosting clients.",
+      "Once you see Tastia at your event, Na shutdown! Exceptional taste, premium dining feel, and friendly service across the board.",
     rating: 5,
     image: "https://randomuser.me/api/portraits/men/85.jpg",
-    date: "February 2025",
-  },
-  {
-    id: "5",
-    name: "Ngozi Eze",
-    role: "Wedding Planner",
-    content:
-      "I've recommended Tastia's catering to over 30 wedding clients. They never disappoint! The food is always excellent, they're punctual, and the setup is beautiful. My clients always thank me.",
-    rating: 5,
-    image: "https://randomuser.me/api/portraits/women/91.jpg",
-    date: "May 2025",
-  },
-  {
-    id: "6",
-    name: "Ibrahim Suleiman",
-    role: "Government Official",
-    content:
-      "The professionalism at Tastia is unmatched in Abuja. From the moment you walk in to when you leave, every detail is attended to. The suya platter is my personal favourite!",
-    rating: 5,
-    image: "https://randomuser.me/api/portraits/men/55.jpg",
-    date: "March 2025",
+    date: "August 2024",
   },
 ];
 
@@ -927,39 +918,78 @@ export const CATERING_PACKAGES = [
 export const BLOG_POSTS = [
   {
     id: "1",
-    title: "The Secret Behind Tastia's Famous Jollof Rice",
+    title:
+      "Discover Tastia Restaurant: A Culinary Haven of Food, Bakery, and Cafe Delights",
     excerpt:
-      "Discover the techniques and ingredients that make our jollof rice the talk of Abuja. From the right tomato base to the perfect smoky finish.",
+      "Explore Tastia's diverse food offerings, from traditional Nigerian dishes to continental cuisine. Our culinary team is dedicated to providing an exceptional dining experience with fresh ingredients.",
     category: "Food Stories",
-    date: "May 20, 2025",
-    readTime: "5 min read",
+    date: "July 4, 2024",
+    readTime: "4 min read",
     image:
-      "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&q=80",
-    slug: "secret-behind-tastia-jollof-rice",
+      "https://tastiarestaurantng.com/wp-content/uploads/2024/07/Ademola-2-1.webp",
+    slug: "discover-tastia-restaurant-culinary-haven",
   },
   {
     id: "2",
-    title: "How to Plan the Perfect Corporate Catering Event",
+    title: "Exploring the Unique Experience at Tastia Restaurant",
     excerpt:
-      "From venue selection to menu planning, our event experts share their top tips for creating a memorable corporate dining experience.",
-    category: "Event Planning",
-    date: "May 10, 2025",
-    readTime: "7 min read",
+      "A Culinary Delight: The Food Experience at Tastia Restaurant. Learn what makes our combination of a first-class restaurant, bakery, and café a unique fusion in Abuja.",
+    category: "Dining Experience",
+    date: "July 4, 2024",
+    readTime: "5 min read",
     image:
-      "https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80",
-    slug: "plan-perfect-corporate-catering",
+      "https://tastiarestaurantng.com/wp-content/uploads/2024/07/IMG_3165_65_1_69_1_50.jpg",
+    slug: "exploring-unique-experience-at-tastia-restaurant",
   },
   {
     id: "3",
-    title: "5 Nigerian Dishes Every Food Lover Must Try",
+    title:
+      "Tastia Restaurant Nigeria Unveils Landmark 230-Seat Restaurant in the Heart of Abuja!",
     excerpt:
-      "We explore five iconic Nigerian dishes that have captivated taste buds around the world — and why Tastia does them better than anyone else.",
-    category: "Food Culture",
-    date: "April 28, 2025",
+      "ABUJA – A groundbreaking addition to the nation's capital has established Tastia Restaurant as the largest dining destination in Abuja, seating approximately 230 guests.",
+    category: "News & Press",
+    date: "July 4, 2024",
+    readTime: "3 min read",
+    image:
+      "https://tastiarestaurantng.com/wp-content/uploads/2024/07/Orji-Uzor-Kalu-Unveils-Tastia-In-Abuja-1.jpg",
+    slug: "tastia-restaurant-nigeria-unveils-landmark-230-seat-restaurant",
+  },
+  {
+    id: "4",
+    title: "A True Leader: The Heart Behind Our Success.",
+    excerpt:
+      "A Boss Who Truly Cares - A Philanthropist & Leader. Learn about the vision, leadership, and philanthropic heart driving Tastia's success, community impact, and expansion.",
+    category: "Leadership",
+    date: "September 17, 2024",
     readTime: "6 min read",
     image:
-      "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=600&q=80",
-    slug: "5-nigerian-dishes-food-lovers-must-try",
+      "https://tastiarestaurantng.com/wp-content/uploads/2024/07/IMG_19152.webp",
+    slug: "true-leader-heart-behind-success",
+  },
+  {
+    id: "5",
+    title: "TOP RESTAURANT IN ABUJA, NIGERIA",
+    excerpt:
+      "Top Restaurants in Abuja 2025 Picks — Where Flavor, luxury, and premium dining experience meet. Discover why Tastia Restaurant remains a favorite destination.",
+    category: "Reviews",
+    date: "September 17, 2025",
+    readTime: "4 min read",
+    image:
+      "https://tastiarestaurantng.com/wp-content/uploads/2025/09/tastia-res.jpg",
+    slug: "top-restaurant-in-abuja-nigeria",
+  },
+  {
+    id: "6",
+    title:
+      "HEALTHY EATING IN ABUJA: HOW TASTIA RESTAURANT BOOSTS YOUR PRODUCTIVITY AND WELL-BEING",
+    excerpt:
+      "HEALTHY EATING IN ABUJA - In Abuja's hustle—traffic, deadlines, and meetings—what we eat plays a vital role. Discover how Tastia Restaurant's healthy meals boost productivity and well-being.",
+    category: "Wellness & Food",
+    date: "September 14, 2025",
+    readTime: "5 min read",
+    image:
+      "https://tastiarestaurantng.com/wp-content/uploads/2025/09/tastia-restaurant-scaled.jpg",
+    slug: "healthy-eating-in-abuja-boosts-productivity-well-being",
   },
 ];
 
