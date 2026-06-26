@@ -508,14 +508,14 @@ export default function Home() {
 
                 {/* Author Details */}
                 <div className="flex flex-col items-center gap-2">
-                  <div className="relative h-12 w-12 rounded-full overflow-hidden border border-zinc-200">
+                  {/* <div className="relative h-12 w-12 rounded-full overflow-hidden border border-zinc-200">
                     <Image
                       src={TESTIMONIALS[activeTestimonial].image}
                       alt={TESTIMONIALS[activeTestimonial].name}
                       fill
                       className="object-cover"
                     />
-                  </div>
+                  </div> */}
                   <div>
                     <cite
                       className="not-italic font-bold text-sm text-zinc-900 uppercase tracking-wide block"
