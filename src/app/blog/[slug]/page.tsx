@@ -72,7 +72,7 @@ export default function BlogPostDetail() {
     }
     return (
       <>
-        <p className="mt-10 md:mt-16">
+        <p>
           Nigerian cuisine is a rich tapestry of colors, spices, and hearty ingredients. For anyone exploring the country's culinary scene, there are a few staple dishes that are absolute must-tries. From savory stews to pillowy swallows, here is our guide.
         </p>
         <h3 className="text-lg font-bold text-zinc-900 pt-4" style={{ fontFamily: "Josefin Sans, sans-serif" }}>1. Smoky Jollof Rice</h3>

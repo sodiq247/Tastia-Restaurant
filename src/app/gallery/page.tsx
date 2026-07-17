@@ -50,10 +50,10 @@ export default function GalleryPage() {
       </section>
 
       {/* GALLERY GRID */}
-      <section className="container-max mx-auto px-4 md:px-8 py-12 md:py-20">
+      <section className="container-max mx-auto px-4 md:px-8 pt-6 md:pt-8 pb-16 md:pb-24">
         <motion.div
           layout
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredImages.map((img) => (
