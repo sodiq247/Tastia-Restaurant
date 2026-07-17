@@ -1,31 +1,52 @@
 "use client";
 
+import Image from "next/image";
 import { BRAND } from "@/lib/data";
 import { Clock, User, Award, Phone } from "lucide-react";
 
 export default function ReservationsPage() {
   return (
     <div className="min-h-screen bg-zinc-50/50 pb-20">
-      {/* HEADER */}
-      <section className="bg-zinc-950 text-white py-10 md:py-16 text-center">
-        <div className="container-max mx-auto px-4 md:px-8 space-y-3">
-          <span className="section-label text-[#ff2a13]">Reservation Desk</span>
-          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tight" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
+      {/* HERO BANNER */}
+      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center text-white bg-black overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <Image
+            src="/Dinnerware-on-table.webp"
+            alt="Elegant table setting at Tastia Restaurant"
+            fill
+            className="object-cover opacity-40 scale-105"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/60" />
+        </div>
+
+        {/* Decorative blurs */}
+        <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[#ff2a13]/8 blur-[120px] pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-[#b52026]/8 blur-[120px] pointer-events-none" />
+
+        {/* Hero Content */}
+        <div className="container-max mx-auto px-4 md:px-8 relative z-10 text-center space-y-4">
+          <span className="inline-block tracking-[0.3em] uppercase text-xs font-bold text-[#ff2a13] bg-[#ff2a13]/10 px-4 py-1.5 rounded-full border border-[#ff2a13]/20" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Reservation Desk
+          </span>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#ff2a13]" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
             Book A Table
           </h1>
-          <p className="text-zinc-400 text-sm max-w-xl mx-auto font-light" style={{ fontFamily: "Poppins, sans-serif" }}>
-            Secure your table at any of our branches. Experience Tastia's world-class dining, VIP lounge, or garden terrace.
+          <p className="text-zinc-300 text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Secure your table at any of our branches. Experience Tastia&apos;s world-class dining, VIP lounge, or garden terrace.
           </p>
         </div>
       </section>
 
       <section className="container-max mx-auto px-4 md:px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mt-16">
           {/* Left Column: Iframe Form Wrapper */}
           <div className="lg:col-span-8 bg-white rounded-3xl border p-6 md:p-10 shadow-sm flex justify-center w-full">
             <iframe
               src="https://amenaa.odobba.com/api/v1/public/reservations/GCfjH_Kpv49fddb8dl60tGm5VXEGJGjw/embed"
-              style={{ width: "100%", maxWidth: "420px", height: "600px", border: 0, borderRadius: "14px" }}
+              style={{ width: "100%", maxWidth: "800px", height: "600px", border: 0, borderRadius: "14px" }}
               title="Reserve a table"
             />
           </div>
