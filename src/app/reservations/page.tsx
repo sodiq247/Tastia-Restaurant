@@ -31,7 +31,7 @@ export default function ReservationsPage() {
           <span className="inline-block tracking-[0.3em] uppercase text-xs font-bold text-[#ff2a13] bg-[#ff2a13]/10 px-4 py-1.5 rounded-full border border-[#ff2a13]/20" style={{ fontFamily: "Poppins, sans-serif" }}>
             Reservation Desk
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#ff2a13]" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-[#ff2a13]" style={{ fontFamily: "Josefin Sans, sans-serif", color: "#d4d4d8" }}>
             Book A Table
           </h1>
           <p className="text-zinc-300 text-sm md:text-base max-w-xl mx-auto font-light leading-relaxed" style={{ fontFamily: "Poppins, sans-serif" }}>

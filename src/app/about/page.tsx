@@ -740,7 +740,7 @@ export default function AboutPage() {
             <span className="section-label text-[#ff2a13]">How We Work</span>
             <h2
               className="text-3xl sm:text-4xl font-black text-white"
-              style={{ fontFamily: "var(--font-heading)" }}
+              style={{ fontFamily: "var(--font-heading)", color: "#d4d4d8" }}
             >
               Our Culture &amp; <span className="text-[#ff2a13]">Core Values</span>
             </h2>
