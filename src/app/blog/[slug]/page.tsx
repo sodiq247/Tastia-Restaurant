@@ -31,7 +31,7 @@ export default function BlogPostDetail() {
     if (post.id === "1") {
       return (
         <>
-          <p>
+          <p >
             Jollof Rice is more than just a dish; it's a cultural cornerstone across West Africa. Here at Tastia, we take pride in serving what many consider Abuja's finest Jollof. But what makes it so special? It comes down to a blend of patience, technique, and quality ingredients.
           </p>
           <h3 className="text-lg font-bold text-zinc-900 pt-4" style={{ fontFamily: "Josefin Sans, sans-serif" }}>1. The Tomato-Pepper Base (Tatashe & Shombo)</h3>
@@ -113,7 +113,7 @@ export default function BlogPostDetail() {
           >
             <ArrowLeft size={12} /> Back to Journal
           </Link>
-          
+
           <div className="space-y-2">
             <span className="bg-[#b52026] text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-sm">
               {post.category}
@@ -136,7 +136,7 @@ export default function BlogPostDetail() {
       {/* Article Content */}
       <section className="container-max mx-auto px-4 md:px-8 py-12 md:py-20 max-w-3xl">
         <div className="bg-white rounded-3xl border p-6 md:p-10 shadow-sm space-y-8">
-          
+
           {/* Article Body */}
           <div
             className="prose prose-zinc max-w-none text-zinc-700 text-sm leading-relaxed space-y-6"
@@ -151,7 +151,7 @@ export default function BlogPostDetail() {
               <Share2 size={14} />
               <span>Share this article</span>
             </div>
-            
+
             <div className="flex items-center gap-2">
               <button
                 onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, "_blank")}

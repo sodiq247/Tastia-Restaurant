@@ -9,7 +9,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-zinc-50/50 pb-20">
       {/* HEADER */}
-      <section className="bg-zinc-950 text-white py-10 md:py-16 text-center">
+      <section className="bg-zinc-950 text-white py-10 md:py-16 text-center mb-10 md:mb-16">
         <div className="container-max mx-auto px-4 md:px-8 space-y-3">
           <span className="section-label text-[#ff2a13]">Tastia Journal</span>
           <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tight" style={{ fontFamily: "Josefin Sans, sans-serif", color: "#d4d4d8" }}>

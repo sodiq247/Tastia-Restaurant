@@ -53,10 +53,10 @@ export default function Home() {
             src="https://tastiarestaurantng.com/wp-content/uploads/2024/07/SAVE_20240718_225034.webp"
             alt="Tastia Dining Ambiance"
             fill
-            className="object-cover opacity-70 scale-105"
+            className="object-cover opacity-45 scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
         </div>
 
         {/* Hero Content */}
@@ -220,7 +220,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-white">
         <div className="container-max mx-auto px-4 md:px-8">
           <div className="text-center max-w-2xl mx-auto space-y-4 mb-12">
-            <span className="section-label">Chef's Picks</span>
+            <span className="section-label">Our Menu</span>
             <h2
               className="text-4xl md:text-5xl font-black text-zinc-950"
               style={{ fontFamily: "Josefin Sans, sans-serif" }}
@@ -229,105 +229,18 @@ export default function Home() {
             </h2>
             <div className="section-divider mx-auto" />
             <p className="text-zinc-500 text-sm" style={{ fontFamily: "Poppins, sans-serif" }}>
-              Explore our highly recommended and popular dishes crafted with fresh local ingredients and traditional recipes.
+              Explore our interactive digital menu below to discover our fresh dishes and traditional recipes.
             </p>
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {FEATURED_ITEMS.slice(0, 4).map((item) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-2xl overflow-hidden border border-zinc-100 shadow-md card-lift flex flex-col justify-between"
-              >
-                {/* Food Image */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 25vw"
-                  />
-                  {/* Badges */}
-                  <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
-                    {item.tags.map((tag, i) => (
-                      <span key={i} className="badge-primary text-[9px] px-2 py-0.5">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  {item.spiceLevel !== undefined && item.spiceLevel > 0 && (
-                    <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md rounded-full p-1.5 text-orange-500 flex items-center gap-0.5 z-10" title={`Spice Level: ${item.spiceLevel}`}>
-                      <Flame size={12} fill="currentColor" />
-                      {item.spiceLevel > 1 && <Flame size={12} fill="currentColor" />}
-                      {item.spiceLevel > 2 && <Flame size={12} fill="currentColor" />}
-                    </div>
-                  )}
-                </div>
-
-                {/* Details */}
-                <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <h3
-                        className="text-base font-bold text-zinc-950 line-clamp-1"
-                        style={{ fontFamily: "Josefin Sans, sans-serif" }}
-                      >
-                        {item.name}
-                      </h3>
-                    </div>
-                    <p
-                      className="text-zinc-500 text-xs leading-relaxed line-clamp-2"
-                      style={{ fontFamily: "Poppins, sans-serif" }}
-                    >
-                      {item.description}
-                    </p>
-                  </div>
-
-                  <div className="space-y-3">
-                    {/* Price and Prep Time */}
-                    <div className="flex items-center justify-between text-xs text-zinc-500">
-                      <div className="flex items-center gap-1">
-                        <Clock size={12} />
-                        <span>{item.prepTime}</span>
-                      </div>
-                      {item.calories && (
-                        <div>
-                          <span>{item.calories} kcal</span>
-                        </div>
-                      )}
-                    </div>
-
-                    <div className="flex items-center justify-between pt-2 border-t border-zinc-50">
-                      <span
-                        className="text-[#b52026] text-lg font-black"
-                        style={{ fontFamily: "Josefin Sans, sans-serif" }}
-                      >
-                        {formatCurrency(item.price)}
-                      </span>
-                      <button
-                        onClick={() => addToCart(item)}
-                        className="btn btn-primary py-1.5 px-3.5 text-xs rounded-md flex items-center gap-1 cursor-pointer"
-                        style={{ fontFamily: "Poppins, sans-serif" }}
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link href="/menu" className="btn btn-outline py-3 px-8 cursor-pointer" style={{ fontFamily: "Poppins, sans-serif" }}>
-              View Our Full Menu
-            </Link>
+          {/* Embedded Interactive Menu */}
+          <div className="bg-white rounded-3xl border shadow-sm overflow-hidden p-2 md:p-4">
+            <iframe
+              src="https://amenaa.odobba.com/api/v1/public/menu/55ce433ae481a77ed5d6d0609f4a8996/embed"
+              style={{ width: "100%", minHeight: "900px", border: "none" }}
+              title="Menu"
+              className="w-full rounded-2xl"
+            />
           </div>
         </div>
       </section>
