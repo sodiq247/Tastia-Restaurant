@@ -256,11 +256,11 @@ export default function AboutPage() {
             src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80"
             alt="Tastia Restaurant premium interior ambiance"
             fill
-            className="object-cover opacity-40 scale-105"
+            className="object-cover opacity-70 scale-105"
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/40" />
         </div>
 
         {/* Decorative blurs */}

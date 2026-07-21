@@ -52,10 +52,10 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
             alt="Tastia Dining Ambiance"
             fill
-            className="object-cover opacity-45 scale-105"
+            className="object-cover opacity-70 scale-105"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/40" />
         </div>
 
         {/* Hero Content */}

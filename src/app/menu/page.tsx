@@ -195,15 +195,16 @@ function MenuContent() {
   return (
     <div className="min-h-screen bg-zinc-50/50 pb-20">
       {/* 1. HEADER BANNER */}
-      <section className="relative pt-12 pb-8 md:py-20 bg-zinc-950 text-white text-center">
-        <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
+      <section className="relative pt-12 pb-8 md:py-20 bg-zinc-950 text-white text-center overflow-hidden">
+        <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=80"
             alt="Tastia Restaurant Menu Background"
             fill
-            className="object-cover"
+            className="object-cover opacity-70 scale-105"
+            priority
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/40" />
         </div>
         <div className="container-max mx-auto px-4 md:px-8 relative z-10 space-y-4">
           <span className="section-label text-[#ff2a13]">Culinary Artistry</span>
