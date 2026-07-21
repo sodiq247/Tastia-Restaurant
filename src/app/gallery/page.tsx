@@ -38,7 +38,7 @@ export default function GalleryPage() {
           <span className="section-label text-[#ff2a13] bg-zinc-950/70 px-4 py-1 rounded-full border border-[#ff2a13]/30 inline-block backdrop-blur-md">
             Visual Showcase
           </span>
-          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white drop-shadow-md" style={{ fontFamily: "Josefin Sans, sans-serif" }}>
+          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tight text-white drop-shadow-md" style={{ fontFamily: "Josefin Sans, sans-serif", color: "#d4d4d8" }}>
             Tastia Photo Gallery
           </h1>
           <p className="text-zinc-200 text-sm md:text-base max-w-xl mx-auto font-light drop-shadow-sm" style={{ fontFamily: "Poppins, sans-serif" }}>
@@ -58,6 +58,7 @@ export default function GalleryPage() {
             width: "100%",
             border: 0,
             minHeight: "480px",
+            marginTop: "60px",
           }}
           title="Tastia Restaurant Gallery"
         />
